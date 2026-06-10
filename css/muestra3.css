@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--backgroung-principal);
+}
+
+/*---------------------Variables-------------------*/
+
+:root{
+    --backgroung-color-principal: #1d1b33;
+    --color-text-principal: #fff;
+    --color-primario: #00edf4;
+    --color-secundario: #da107b;
+
+    --background-color-buscador: #2a284a;
+    --background-color-footer: #14122b;
+    --color-overlay: #000;
+
+    --font-size-h1: 700px;
+    --padding-header: 30px 100px;
+}
+
+/*---------------------Header-------------------*/
+
+.header {
+    width: 100%;
+    background-color: var(--backgroung-color-principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 30px 100px;
+
+}
+.logo img {
+    width: 120px;
+}
+.menu {
+    display: flex;
+    gap: 30px;
+}
+.menu a {
+    color: var(--color-text-principal);
+    text-decoration: none;
+    font-weight: 300;
+    position: relative;
+}
+
+.menu a::after {
+    width: 0%;
+    content: ""; /*contenido vacio*/
+    background: var(--color-primario);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 4px;
+    transition: 0.5s;
+}
+.menu a:hover::after {
+    width: 100%;
+}
+.search {
+    background: var(--background-color-buscador);
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.search input {
+    background: none;
+    color: var(--color-primario);
+    border: none;
+    outline: none;
+}
+
+.search i {
+    margin-left: 15px;
+    color: var(--color-primario);
+}
+.menu-toggle{
+    display: none;
+    cursor: pointer;
+
+}
+
+/*---------------------Hero-------------------*/
+.hero{
+    width: 100vw;
+    height: 100vh;
+
+}
+.hero-content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.hero-content video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+}
+.textura{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/texture.png);
+    position: absolute;  
+    z-index: 2;
+    background-size: cover;
+    opacity: 0.5; 
+    top: 0;
+    left: 0;
+
+}
+.opacity{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.text {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 4;
+}
+.text h1{
+    width: 100%;
+    font-size: 70px;
+    color: var(--color-text-principal);
+    padding-bottom: 20px;
+}
+
+.text p{
+    color: var(--color-text-principal);
+    padding-bottom: 20px;
+}
+
+.text a{
+    background-color: var(--color-primario);
+    color: var(--backgroung-color-principal);
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    transform: scale(100%);
+    transition: 0.3s ease;
+}
+.text a:hover{
+    transform: scale(110%);
+}
+/*---------------------Grid-------------------*/
+.grid{
+    padding: 20px 0;
+    background-color: var(--color-text-principal);
+}
+.container{
+    width: 100%;
+    padding: 40px 50px;
+    margin: auto;
+    text-align: center;
+}
+.container h2{
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+.container p{
+    font-size: 20px;
+}
+.grid-items{
+    width: 100%;
+    height: 100vh;
+    padding: 50px 0;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "a a f"
+                         "b c f"
+                         "d d g";
+}
+.grid-items div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+
+}
+.grid-item1{
+    background: url(../images/foto-grid1.webp);
+    background-size: cover;
+    background-position: center;
+    grid-area: a;
+}
+.grid-item2{
+    background: url(../images/foto-grid3.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: b;
+}
+.grid-item3{
+    background: url(../images/foto-grid4.webp);
+    background-size: cover;
+    background-position: center;
+    grid-area: c;
+}
+.grid-item4{
+    background: url(../images/foto-grid5.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: d;
+}
+.grid-item5{
+    background: url(../images/foto-grid2.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: f;
+}
+.grid-item6{
+    background: url(../images/foto-grid6.webp);
+    background-size: cover;
+    background-position: center;
+    grid-area: g;
+}
+.grid-items div::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.grid-items a{
+    padding: 10px 20px;
+    background: var(--color-primario);
+    color: var(--backgroung-color-principal);
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s ease;
+}
+.grid-items div:hover::before{
+    opacity: 1;
+}
+
+.grid-items div:hover a{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*---------------------Footer-------------------*/
+.footer {
+    width: 100%;
+    height: auto;
+    background: #14122b;
+}
+.footer-content{
+    padding: 80px 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.footer-logo{
+    width: 300px;
+}
+.footer-logo img{
+    width: 130px;
+    margin-bottom: 20px;
+}
+.footer-logo p{
+    width: 300px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text-principal);
+}
+.footer-social{
+    width: 400px;
+    display: flex;
+    gap: 20px;
+}
+.footer-social div{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-primario);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.footer-social i{
+    font-size: 20px;
+    color: var(--backgroung-color-principal);
+}
+.footer-social div:hover{
+    background: var(--color-secundario);
+    transform: scale(1.5);
+}
+.footer-newsletter{
+    width: 400px;
+}
+.footer-newsletter h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--color-text-principal);
+}
+.footer-newsletter input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.footer-newsletter button{
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background: var(--color-secundario);
+    color: var(--color-text-principal);
+}
+.footer-newsletter button:hover{
+transform: scale(1.1);
+transition: 0.3s ease;
+}
+/*---------------------Responsive-------------------*/
+
+@media (max-width: 768px) {
+    .menu {
+        width: 100%;
+        background: var(--backgroung-color-principal);
+        position: absolute;
+        left: 0;
+        top: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        display: none;
+        padding: 30px;
+    }
+
+    .mostrar{
+        display: flex;
+    }
+    
+    .search {
+        display: none;
+    }
+
+    .menu-toggle {
+        color: var(--color-text-principal);
+        font-size: 30px;
+        display: flex;
+    }
+/*---------------------Header-------------------*/
+
+    .header{
+        padding: 30px 25px;
+    }
+
+/*---------------------Hero-------------------*/
+
+    .text{
+        width: 90%;
+    }
+    .text h1{
+        font-size: 55px;
+    }
+
+    .text p{
+        width: 85%;
+    }
+/*---------------------Grid-------------------*/
+    .container h2{
+        font-size: 40px;
+        font-weight: 750;
+    }
+    .container p{
+    font-size: 16px;
+    }
+    .grid-items{ 
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: "a"
+                             "f"
+                             "b"
+                             "c"
+                             "d"
+                             "g";
+}
+/*---------------------Footer-------------------*/
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+  
+}
