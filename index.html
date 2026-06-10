@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/muestra3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muestra 3</title>
+</head>
+<body>
+
+<!-- -------------------------- Header ----------------------------------->
+
+    <header class="header">
+
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
+        <nav class="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Novedades</a>
+            <a href="#">Ofertas</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Buscar" >
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        
+        <div class="menu-toggle">
+            <i class="fa fa-bars"></i>
+        </div>
+
+    </header>
+
+<!-- -------------------------- Hero ----------------------------------->
+
+    <section class="hero">
+
+        <div class="hero-content">
+            <div>
+                <video src="images/video-hero.mp4" autoplay muted loop></video>
+            </div>
+            <div class="textura"></div>
+            <div class="opacity"></div>
+            <div class="text">
+                <h1>Potencia tu mundo digital</h1>
+                <p>Descubre lo último en tecnología, innovación y rendimiento para llevar tu experiencia al siguiente nivel.</p>
+                <a href="#">Explorar ahora</a>
+            </div>
+        </div>
+
+    </section>
+
+<!-- -------------------------- Grid ----------------------------------->
+    <section class="grid">
+
+        <div class="container">
+            <h2>Explora nuestra tecnología</h2>
+            <p>Encuentra los dispositivos más innovadores del mercado, diseñados para mejorar tu rendimiento, productividad y entretenimiento.</p>
+
+            <div class="grid-items">
+                
+                <div class="grid-item1">
+                    <a href="#">Ver más</a>
+                </div>
+                <div class="grid-item2">
+                    <a href="#">Ver más</a>
+                </div>
+                <div class="grid-item3">
+                    <a href="#">Ver más</a>
+                </div>
+                <div class="grid-item4">
+                    <a href="#">Ver más</a>
+                </div>
+                <div class="grid-item5">
+                    <a href="#">Ver más</a>
+                </div>
+                <div class="grid-item6">
+                    <a href="#">Ver más</a>
+                </div>
+            </div>
+        </div>
+
+    </section> 
+
+<!-- -------------------------- Footer ----------------------------------->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="">
+                <p>Tecnología de última generación para mejorar tu día a día. Innovación, calidad y rendimiento en un solo lugar.</p>
+            </div>
+
+            <div class="footer-social">
+                <div>
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+
+            <div class="footer-newsletter">
+                <h2>Suscríbete a nuestro newsletter</h2>
+                <input type="text" placeholder="Email">
+                <button class="btn"> Enviar </button>
+            </div>
+        </div>
+
+    </footer>
+ <!-- -------------------------- Script ----------------------------------->
+    <script>
+        const boton = document.querySelector(".menu-toggle");
+        const nav = document.querySelector(".menu");
+        boton.addEventListener("click", function(){
+            nav.classList.toggle("mostrar");
+        });
+    </script>
+
+</body>
+</html>
